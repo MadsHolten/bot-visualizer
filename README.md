@@ -1,31 +1,17 @@
-# DataVis
+# BOT visualizer
 
-[Demo](https://madsholten.github.io/sparql-visualizer/)
+[Demo](https://madsholten.github.io/bot-visualizer/)
 
-This is a small project for visualising RDF-data in a D3 force diagram. The predefined tabs can not be changed by the user, as each of them are supposed to hold predefined data and queries to be communicated to the readers. Each tab consists of the following:
+This is a small project for visualising small BOT-compliant datasets in a D3 force diagram to illustrate the potentials of the ontology. It is based on the [SPARQL-visualizer](https://github.com/MadsHolten/sparql-visualizer) project.
 
-### Data tab
+### References
+[BOT](https://github.com/w3c-lbd-cg/bot)
 
-In this tab, a small dataset is given in Turtle syntax.
+## BOT in the literature
+*Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 [http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153](http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153)*
 
-### Query tab
+*Mads Holten Rasmussen, Pieter Pauwels, Maxime Lefrançois, Georg Ferdinand Schneider, Christian Anker Hviid and Jan Karlshøj (2017) Recent changes in the Building Topology Ontology, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, [https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology](https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology)*
 
-In this tab a CONSTRUCT query to be evaluated against the dataset is specified. This is done by loading the dataset into an in-memory [rdfstore](https://www.npmjs.com/package/rdfstore) and also executing the query using this library. No reasoning is currently supported.
+*Mads Holten Rasmussen, Christian Anker Hviid and Jan Karlshøj (2017) Web-based topology queries on a BIM model, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, [https://www.researchgate.net/publication/320757039_Web-based_topology_queries_on_a_BIM_model](https://www.researchgate.net/publication/320757039_Web-based_topology_queries_on_a_BIM_model)*
 
-### Query result tab
-
-This is where the result is illustrated
-
-## Local development
-
-I encourage you to do join the effort and contribute to the code base. Simply fork the project and run `npm install` to install the dependencies. Then run `ng serve` to run a local development server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-The tabs, descriptions, default datasets and queries are generated based on `assets/data.json`.
-
-The viewer can communicate with a Stardog triplestore - only tested locally.
-
-## Acknowledgements
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
-
-The force graph used for visualising the results is built with [D3](https://d3js.org/). The implementation is based on [a project by Rathachai](https://github.com/Rathachai/d3rdf).
+*Georg Ferdinand Schneider (2017) Towards Aligning Domain Ontologies with the Building Topology Ontology, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, [https://www.researchgate.net/publication/320878270_Towards_Aligning_Domain_Ontologies_with_the_Building_Topology_Ontology](https://www.researchgate.net/publication/320878270_Towards_Aligning_Domain_Ontologies_with_the_Building_Topology_Ontology)*
