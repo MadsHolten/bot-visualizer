@@ -14,7 +14,7 @@
         "title": "1: A simple building",
         "description": [
             "Let's start as simple as it gets. A building with a single storey and a single space.\n",
-            "The default query is a \"SELECT\" query which returns a table with all the spaces in the dataset, but if you change the \"`SELECT *`\" to \"`CONSTRUCT`\" it will instead return the part of the dataset that matches the query. `CONSTRUCT { ?s ?p ?o }` will return the full dataset.\n",
+            "The default query is a \"CONSTRUCT\" query which returns a force graph with the full dataset. Changing \"`CONSTRUCT`\" to \"`SELECT *`\" will tell the system to instead return a table displaying the query results. If you change. `CONSTRUCT WHERE { ?s ?p ?o }` to `SELECT * WHERE { ?s a bot:Space }` it will return all the space instances in the dataset.\n",
             "#### Challenges",
             "Try adding some more spaces to the dataset and re-run the query. Then try to add another storey with some more spaces.\n",
             "Try traversing the graph by adding some more statements to the query.",
@@ -27,9 +27,9 @@
         "query": [
             "PREFIX bot:  <https://w3id.org/bot#>",
             "PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n",
-            "SELECT *",
+            "CONSTRUCT",
             "WHERE {",
-            "\t?s a bot:Space",
+            "\t?s ?p ?o",
             "}"
         ],
         "triples": [
